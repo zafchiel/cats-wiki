@@ -1,4 +1,6 @@
 import Link from "next/link";
+import rightArrow from "../assets/icons/rightArrow.svg";
+import Image from "next/image";
 
 export default function MostSearchedSection() {
   return (
@@ -8,7 +10,9 @@ export default function MostSearchedSection() {
       <div className="flex flex-col md:flex-row justify-between">
         <h3 className="text-3xl font-bold">66+ Breed for you to discover</h3>
 
-        <Link href="/breeds">SEE MORE</Link>
+        <Link href="/breeds" className="flex gap-2 items-center">
+          SEE MORE <Image src={rightArrow} alt="Right Arrow Icon" />
+        </Link>
       </div>
     </section>
   );

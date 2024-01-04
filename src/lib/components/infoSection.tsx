@@ -3,6 +3,7 @@ import catImage1 from "../assets/images/cat1.jpg";
 import catImage2 from "../assets/images/cat2.jpg";
 import catImage3 from "../assets/images/cat3.jpg";
 import Image from "next/image";
+import rightArrow from "../assets/icons/rightArrow.svg";
 
 export default function InfoSection() {
   return (
@@ -19,7 +20,9 @@ export default function InfoSection() {
           chemicals in your body which lower your stress and axiety levels
         </p>
 
-        <Link href="/info">READ MORE</Link>
+        <Link href="/info" className="flex gap-2 items-center">
+          READ MORE <Image src={rightArrow} alt="Arrow right icon" />
+        </Link>
       </div>
 
       <div className="grid grid-cols-2 gap-4">
