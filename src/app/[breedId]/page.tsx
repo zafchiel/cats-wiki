@@ -1,3 +1,4 @@
+import BreedGallery from "@/lib/components/breedGallery";
 import CatDetailsSection from "@/lib/components/catDetailsSection";
 import { Cat } from "@/lib/types";
 
@@ -22,7 +23,11 @@ export default async function BreedPage({
 
   return (
     <main>
-      <CatDetailsSection cat={breedData} />
+      <div className="grid md:grid-cols-2">
+        <div></div>
+        <CatDetailsSection cat={breedData} />
+      </div>
+      <BreedGallery />
     </main>
   );
 }
