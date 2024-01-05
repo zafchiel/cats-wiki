@@ -19,7 +19,7 @@ export default function ({ cat }: Props) {
       <div>
         <span className="font-bold">Life span:</span> {cat.life_span}
       </div>
-      <div className="grid gap-y-3 grid-cols-[200px_1fr]">
+      <div className="grid gap-y-3 gap-x-4 grid-cols-[auto_1fr]">
         <span className="font-bold">Adaptability:</span>
         <Rating rating={cat.adaptability} />
 

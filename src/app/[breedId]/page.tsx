@@ -23,7 +23,7 @@ export default async function BreedPage({
 
   return (
     <main>
-      <div className="grid md:grid-cols-2 gap-4 place-items-center md:place-items-start">
+      <div className="flex flex-col md:flex-row gap-4">
         <div>
           <Image
             src={breedImages[0].url}
