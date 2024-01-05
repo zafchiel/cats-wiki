@@ -7,7 +7,7 @@ import rightArrow from "../assets/icons/rightArrow.svg";
 
 export default function InfoSection() {
   return (
-    <section className="text-[#291507] p-3 md:p-12 grid gap-3 lg:grid-cols-2">
+    <section className="p-3 md:p-12 grid gap-3 lg:grid-cols-2">
       <div className="max-w-md flex gap-3 flex-col justify-around">
         <div className="">
           <hr className="h-1 bg-[#4d270c] w-12 rounded-3xl" />

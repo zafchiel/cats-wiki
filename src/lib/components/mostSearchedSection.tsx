@@ -8,7 +8,7 @@ import selkirk from "../assets/images/selkirk.jpg";
 
 export default function MostSearchedSection() {
   return (
-    <section className="bg-[#e3e1dc] px-3 pb-3 md:px-12 md:pb-12 pt-4 text-[#291507] rounded-b-3xl">
+    <section className="bg-[#e3e1dc] px-3 pb-3 md:px-12 md:pb-12 pt-4 rounded-b-3xl">
       <h5>Most Searched Breeds</h5>
       <hr className="h-1 bg-[#4d270c] w-12 rounded-3xl mb-4" />
       <div className="flex flex-col md:flex-row justify-between">
