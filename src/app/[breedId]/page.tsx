@@ -1,6 +1,8 @@
 import BreedGallery from "@/lib/components/breedGallery";
 import CatDetailsSection from "@/lib/components/catDetailsSection";
-import { Cat } from "@/lib/types";
+import { BreedImage, Cat } from "@/lib/types";
+import { fetchBreedInfoAndImages } from "@/lib/utils";
+import Image from "next/image";
 
 export default async function BreedPage({
   params,
@@ -8,26 +10,32 @@ export default async function BreedPage({
   params: { breedId: string };
 }) {
   let breedData: Cat | null = null;
+  let breedImages: BreedImage[] | null = null;
   try {
-    const res = await fetch(
-      `https://api.thecatapi.com/v1/breeds/${params.breedId}`
-    );
-    if (!res.ok) throw new Error("Failed to fetch");
-
-    breedData = await res.json();
+    const data = await fetchBreedInfoAndImages(params.breedId);
+    breedData = data.breedInfo;
+    breedImages = data.breedImages;
   } catch (error) {
     console.log(error);
   }
 
-  if (!breedData) return <>Breed not found</>;
+  if (!breedData || !breedImages) return <>Breed not found</>;
 
   return (
     <main>
-      <div className="grid md:grid-cols-2">
-        <div></div>
+      <div className="grid md:grid-cols-2 gap-4 place-items-center md:place-items-start">
+        <div>
+          <Image
+            src={breedImages[0].url}
+            width={500}
+            height={500}
+            alt="Cat Image"
+            className="rounded-xl aspect-square object-cover"
+          />
+        </div>
         <CatDetailsSection cat={breedData} />
       </div>
-      <BreedGallery />
+      <BreedGallery images={breedImages.slice(2)} />
     </main>
   );
 }

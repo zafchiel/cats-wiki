@@ -40,3 +40,10 @@ export type Cat = {
   hypoallergenic: number;
   reference_image_id: string;
 };
+
+export type BreedImage = {
+  id: string;
+  url: string;
+  width: number;
+  height: number;
+};
