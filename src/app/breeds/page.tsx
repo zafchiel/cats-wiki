@@ -21,7 +21,7 @@ export default async function BreedsPage() {
           <Link
             href={`/${cat.id}`}
             key={cat.id}
-            className="flex gap-4 mb-8 p-4 rounded-xl hover:bg-[#e3e1dc]"
+            className="flex flex-col md:flex-row gap-4 mb-8 p-4 rounded-xl hover:bg-[#e3e1dc]"
           >
             {/* image placeholder */}
             <div className="w-52 h-52 bg-gray-600 rounded-xl" />

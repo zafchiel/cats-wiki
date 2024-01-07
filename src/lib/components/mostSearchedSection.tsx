@@ -21,7 +21,7 @@ export default function MostSearchedSection() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 justify-items-center mt-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-10 justify-items-center mt-8">
         <Link href={`/beng`} className="p-4 rounded-xl hover:bg-white">
           <Image
             src={bengal}
