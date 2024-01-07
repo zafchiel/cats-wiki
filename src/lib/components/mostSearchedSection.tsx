@@ -22,7 +22,7 @@ export default function MostSearchedSection() {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 justify-items-center mt-8">
-        <Link href={`/beng`}>
+        <Link href={`/beng`} className="p-4 rounded-xl hover:bg-white">
           <Image
             src={bengal}
             alt="Bengal Cat"
@@ -30,7 +30,7 @@ export default function MostSearchedSection() {
           />
           <p className="font-semibold mt-3">Bengal</p>
         </Link>
-        <Link href={`/norw`}>
+        <Link href={`/norw`} className="p-4 rounded-xl hover:bg-white">
           <Image
             src={norvegian}
             alt="Norvegian Forest Cat"
@@ -38,7 +38,7 @@ export default function MostSearchedSection() {
           />
           <p className="font-semibold mt-3">Norvegian Forest Cat</p>
         </Link>
-        <Link href={`/sava`}>
+        <Link href={`/sava`} className="p-4 rounded-xl hover:bg-white">
           <Image
             src={savannah}
             alt="Savannah Cat"
@@ -46,7 +46,7 @@ export default function MostSearchedSection() {
           />
           <p className="font-semibold mt-3">Savannah</p>
         </Link>
-        <Link href={`/srex`}>
+        <Link href={`/srex`} className="p-4 rounded-xl hover:bg-white">
           <Image
             src={selkirk}
             alt="Selkirk Rex Cat"
