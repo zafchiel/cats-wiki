@@ -26,7 +26,7 @@ export default function InfoSection() {
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        <div className="grid gap-4">
+        <div className="grid gap-4 pt-4">
           <Image
             src={catImage1}
             alt="Cat Image"

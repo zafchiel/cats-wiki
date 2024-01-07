@@ -22,38 +22,38 @@ export default function MostSearchedSection() {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 justify-items-center mt-8">
-        <div>
+        <Link href={`/beng`}>
           <Image
             src={bengal}
             alt="Bengal Cat"
             className="object-cover aspect-square rounded-2xl"
           />
           <p className="font-semibold mt-3">Bengal</p>
-        </div>
-        <div>
+        </Link>
+        <Link href={`/norw`}>
           <Image
             src={norvegian}
             alt="Norvegian Forest Cat"
             className="object-cover aspect-square rounded-2xl"
           />
           <p className="font-semibold mt-3">Norvegian Forest Cat</p>
-        </div>
-        <div>
+        </Link>
+        <Link href={`/sava`}>
           <Image
             src={savannah}
             alt="Savannah Cat"
             className="object-cover aspect-square rounded-2xl"
           />
           <p className="font-semibold mt-3">Savannah</p>
-        </div>
-        <div>
+        </Link>
+        <Link href={`/srex`}>
           <Image
             src={selkirk}
             alt="Selkirk Rex Cat"
             className="object-cover aspect-square rounded-2xl"
           />
           <p className="font-semibold mt-3">Selkirk Rex</p>
-        </div>
+        </Link>
       </div>
     </section>
   );
