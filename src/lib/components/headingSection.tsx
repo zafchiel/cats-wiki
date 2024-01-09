@@ -8,10 +8,14 @@ export default function HeadingSection() {
     <section className="bg-black text-white grid grid-cols-2 rounded-t-3xl items-center">
       <div className="p-3 md:p-12 flex flex-col">
         <div className="flex gap-3">
-          <h1 className="text-3xl md:text-6xl font-bold whitespace-nowrap">
+          <h1 className="text-3xl md:text-5xl font-bold whitespace-nowrap">
             Cats Wiki
           </h1>
-          <Image src={whiteCatIcon} alt="Cat Icon" />
+          <Image
+            src={whiteCatIcon}
+            alt="Cat Icon"
+            className="hidden md:block"
+          />
         </div>
         <p className="md:text-xl">Get to know more about your cat breed</p>
 

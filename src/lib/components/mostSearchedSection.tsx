@@ -16,12 +16,15 @@ export default function MostSearchedSection() {
           66+ Breeds for you to discover
         </h3>
 
-        <Link href="/breeds" className="flex gap-2 items-center min-w-max">
+        <Link
+          href="/breeds"
+          className="flex gap-2 items-center min-w-max font-semibold"
+        >
           SEE MORE <Image src={rightArrow} alt="Right Arrow Icon" />
         </Link>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-10 justify-items-center mt-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-10 justify-items-center md:mt-8">
         <Link href={`/beng`} className="p-4 rounded-xl hover:bg-white">
           <Image
             src={bengal}
