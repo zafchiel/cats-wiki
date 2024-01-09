@@ -11,7 +11,7 @@ export default function InfoSection() {
       <div className="max-w-md flex gap-3 flex-col justify-around">
         <div className="">
           <hr className="h-1 bg-[#4d270c] w-12 rounded-3xl" />
-          <h3 className="text-xl md:text-3xl font-bold">
+          <h3 className="text-3xl md:text-3xl font-bold">
             Why should you have a cat?
           </h3>
         </div>
