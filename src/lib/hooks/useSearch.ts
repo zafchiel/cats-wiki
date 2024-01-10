@@ -28,10 +28,7 @@ export function useSearch(searchString: string) {
 
     fetch(`${API_URL}?q=${debouncedSearchInput}`)
       .then((res) => res.json())
-      .then((data) => {
-        setSearchResults(data);
-        console.log(data);
-      })
+      .then((data) => setSearchResults(data))
       .catch((err) => console.error(err))
       .finally(() => setIsSearching(false));
   }, [debouncedSearchInput]);

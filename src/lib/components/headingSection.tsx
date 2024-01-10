@@ -3,6 +3,7 @@ import catImg from "../assets/images/catImg.png";
 import whiteCatIcon from "../assets/icons/catWhite.svg";
 import searchIcon from "../assets/icons/search.svg";
 import Search from "./search";
+import SearchModal from "./searchModal";
 
 export default function HeadingSection() {
   return (
@@ -20,7 +21,17 @@ export default function HeadingSection() {
         </div>
         <p className="md:text-xl">Get to know more about your cat breed</p>
 
-        <Search />
+        <div className="mt-8">
+          {/* DIsplay on Larger devices */}
+          <div className="hidden md:block">
+            <Search isOnModal={false} />
+          </div>
+
+          <div className="md:hidden">
+            {/* Display on mobile */}
+            <SearchModal />
+          </div>
+        </div>
       </div>
 
       <Image
