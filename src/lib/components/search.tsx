@@ -2,17 +2,20 @@
 
 import searchIcon from "../assets/icons/search.svg";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useSearch } from "../hooks/useSearch";
 import Link from "next/link";
 
 export default function Search() {
   const [searchInput, setSearchInput] = useState("");
+  const [isInputFocused, setIsInputFocused] = useState(false);
   const { isSearching, searchResults } = useSearch(searchInput);
 
   return (
-    <div className="relative">
+    <div className="relative mt-8">
       <input
+        onFocus={() => setIsInputFocused(true)}
+        onBlur={() => setIsInputFocused(false)}
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
         type="search"
@@ -32,7 +35,7 @@ export default function Search() {
         />
       )}
 
-      {searchResults.length > 0 && searchInput && (
+      {searchResults.length > 0 && searchInput && isInputFocused && (
         <div className="bg-white rounded-xl grid gap-1 text-black absolute w-full">
           {searchResults.map((result) => (
             <Link
