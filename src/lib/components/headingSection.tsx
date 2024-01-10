@@ -2,6 +2,7 @@ import Image from "next/image";
 import catImg from "../assets/images/catImg.png";
 import whiteCatIcon from "../assets/icons/catWhite.svg";
 import searchIcon from "../assets/icons/search.svg";
+import Search from "./search";
 
 export default function HeadingSection() {
   return (
@@ -20,11 +21,7 @@ export default function HeadingSection() {
         <p className="md:text-xl">Get to know more about your cat breed</p>
 
         <div className="relative mt-8 ">
-          <input
-            type="search"
-            placeholder="Enter your breed"
-            className="py-3 pl-3 pr-10 w-full rounded-3xl caret-black text-black"
-          />
+          <Search />
           <Image
             src={searchIcon}
             alt="Search Icon"
