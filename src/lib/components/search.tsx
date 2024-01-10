@@ -36,7 +36,7 @@ export default function Search() {
       )}
 
       {searchResults.length > 0 && searchInput && isInputFocused && (
-        <div className="bg-white rounded-xl grid gap-1 text-black absolute w-full">
+        <div className="bg-white rounded-xl grid gap-1 text-black absolute w-full max-h-32 overflow-y-scroll">
           {searchResults.map((result) => (
             <Link
               href={`/${result.id}`}
