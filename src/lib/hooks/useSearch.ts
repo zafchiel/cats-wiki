@@ -1,4 +1,4 @@
-import { useState, useEffect, RefObject } from "react";
+import { useState, useEffect } from "react";
 import { Cat } from "../types";
 
 const API_URL = "https://api.thecatapi.com/v1/breeds/search";
@@ -10,6 +10,8 @@ export function useSearch(searchString: string) {
   const [searchResults, setSearchResults] = useState<Cat[]>([]);
 
   useEffect(() => {
+    if (searchString.length >= 3) setIsSearching(true);
+
     setSearchInput(searchString);
   }, [searchString]);
 
@@ -24,7 +26,6 @@ export function useSearch(searchString: string) {
   useEffect(() => {
     if (debouncedSearchInput.length < 3) return;
 
-    setIsSearching(true);
     fetch(`${API_URL}?q=${debouncedSearchInput}`)
       .then((res) => res.json())
       .then((data) => {

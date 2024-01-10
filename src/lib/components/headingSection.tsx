@@ -20,14 +20,7 @@ export default function HeadingSection() {
         </div>
         <p className="md:text-xl">Get to know more about your cat breed</p>
 
-        <div className="relative mt-8 ">
-          <Search />
-          <Image
-            src={searchIcon}
-            alt="Search Icon"
-            className="absolute top-4 right-4"
-          />
-        </div>
+        <Search />
       </div>
 
       <Image
