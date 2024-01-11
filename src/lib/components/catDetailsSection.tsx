@@ -7,7 +7,7 @@ type Props = {
 
 export default function ({ cat }: Props) {
   return (
-    <section className="grid gap-3 max-w-md">
+    <section className="grid gap-3 max-w-md pb-8">
       <h1 className="font-bold text-6xl">{cat.name}</h1>
       <p>{cat.description}</p>
       <div>

@@ -4,6 +4,16 @@ import { BreedImage, Cat } from "@/lib/types";
 import { fetchBreedInfoAndImages } from "@/lib/utils";
 import Image from "next/image";
 
+export async function generateStaticParams() {
+  const breeds: Cat[] = await fetch("https://api.thecatapi.com/v1/breeds").then(
+    (res) => res.json()
+  );
+
+  return breeds.map((breed) => ({
+    breedId: breed.id,
+  }));
+}
+
 export default async function BreedPage({
   params,
 }: {
@@ -26,17 +36,19 @@ export default async function BreedPage({
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center md:items-stretch">
         <div className="relative">
           <div className="bg-[#dec68b] w-3 md:h-36 lg:h-64 absolute right-full top-5 rounded-l-lg"></div>
-          <Image
-            src={breedImages[0].url}
-            width={500}
-            height={500}
-            alt="Cat Image"
-            className="rounded-xl aspect-square object-cover"
-          />
+          {breedImages[0] && (
+            <Image
+              src={breedImages[0].url}
+              width={500}
+              height={500}
+              alt="Cat Image"
+              className="rounded-xl aspect-square object-cover"
+            />
+          )}
         </div>
         <CatDetailsSection cat={breedData} />
       </div>
-      <BreedGallery images={breedImages.slice(2)} />
+      {breedImages.length > 0 && <BreedGallery images={breedImages.slice(2)} />}
     </main>
   );
 }
