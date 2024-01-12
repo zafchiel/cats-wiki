@@ -29,7 +29,12 @@ export default async function BreedPage({
     console.log(error);
   }
 
-  if (!breedData || !breedImages) return <>Breed not found</>;
+  if (!breedData || !breedImages)
+    return (
+      <main className="p-10 flex items-center justify-center text-xl md:text-6xl font-bold">
+        Breed not found
+      </main>
+    );
 
   return (
     <main>
